@@ -14,4 +14,4 @@ arg="--build-arg APP=$APP"
 [ "$GIT_USER" != "" ] && arg="$arg --build-arg GIT_USER=$GIT_USER"
 [ "$KEY_PASSPHRASE" != "" ] && arg="$arg --build-arg KEY_PASSPHRASE=\"$KEY_PASSPHRASE\""
 
-docker build $arg --build-arg SSH_KEY="$(cat $KEY_FILE)" -t $APP .
+docker build --network=host $arg --build-arg SSH_KEY="$(cat $KEY_FILE)" -t $APP .
