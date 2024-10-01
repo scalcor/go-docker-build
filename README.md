@@ -1,4 +1,4 @@
-# gox-docker-build
+# go-docker-build
 
 Dockerfile which accesses a Go project in the private repository and builds the docker image.
 To access the private repository, ssh key file and the passphrase is required.
